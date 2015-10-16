@@ -1,0 +1,38 @@
+body {
+	background-image: url(tweed.png);
+}
+.container {
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 5px;
+}
+#banner {
+	background-color: rgba(0,0,0,0.4);
+	padding: 10px;
+}
+#side {
+	/*background-color: orange;*/
+}
+#main {
+	padding-right: 40px;
+}
+.logo {
+	width: 150px;
+}
+#title {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: white;
+}
+
+li {
+	list-style: none;
+	width: 100px;
+	background-color: #007ac3;
+	margin-top: 10px;
+}
+
+li a {
+	padding: 10px;
+	color: #fff;
+}

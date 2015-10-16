@@ -1,0 +1,19 @@
+body {
+  background-image: url("crossword.png");
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 a:hover {
+  text-decoration: none;
+}
+
+.field {
+  margin-top:10px;
+}
+
+.btn {
+  margin-top:10px;
+}

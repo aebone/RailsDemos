@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="page-header">Our Books</h1>
+
+<% @products.each_slice(3) do |row| %>
+	<div class="row">
+	  <% row.each do |product| %>
+		  <div class="col-md-4">
+			  <div class="product">
+			    <%= image_tag(product.image_url) %><br>
+			    <h3><%= product.title %></h3>
+			    <%= truncate(strip_tags(product.description), length: 80) %><br>
+			    <%= link_to 'Show', product %> | 
+			    <%= link_to 'Edit', edit_product_path(product) %> | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+			  </div>
+		  </div>
+		<% end %>
+	</div>
+<% end %>
+<br>
+<%= link_to 'New Product', new_product_path, class: "btn btn-default" %>

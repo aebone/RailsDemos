@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Depot</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <a href="#" class="navbar-brand">Home</a>
+	    </div>
+	    <div class="navbar-collapse collapse" id="navbar-main">
+	      <ul class="nav navbar-nav">
+	        <li>
+	          <a href="#">Products</a>
+	        </li>
+	        <li>
+	          <a href="#">About Us</a>
+	        </li>
+	        <li>
+	          <a href="#">Contact</a>
+	        </li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">Shopping Cart</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="container box">
+		<%= yield %>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blogging</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="container">
+		<!-- BANNER -->
+		<div class="row" id="banner">
+			<div id="logo" class="col-md-2">
+				<%= image_tag("logo.png", class: 'logo') %>
+			</div>
+			<div id="title" class="col-md-8">	
+				<h1>Blogging Application</h1>
+			</div>
+			<div id="logo" class="col-md-2">
+				<%= image_tag("logo.png", class: 'logo') %>
+			</div>
+		</div>
+		<div class="row">
+			<!-- SIDE NAVBAR -->
+			<div id="side" class="col-md-2">
+				<ul>
+					<li><%= link_to "Show Posts", posts_path %></li>
+					<li><%= link_to "Hello", posts_hello_path %></li>
+					<li><%= link_to "Goodbye", posts_goodbye_path %></li>
+					<li><%= link_to 'New Post', new_post_path %></li>
+				</ul>
+			</div>
+			<!-- MAIN CONTENT -->
+			<div id="main" class="col-md-10">
+				<%= yield %>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
