@@ -1,3 +1,35 @@
 .box {
 	margin-top: 60px;
 }
+.product {  
+	img {
+	 width:85px;
+	 height:120px;
+	}
+	padding: 15px;
+	border: 2px solid #f8f5f0;
+	margin-bottom: 10px;
+}
+.page-header {
+	font-size: 4em;
+	margin-bottom: 40px;
+}
+#notice {
+	margin-top:20px;
+}
+
+.product-customer {  
+	height: 400px;
+	margin-bottom: 20px;
+	img {
+	 width:100px;
+	 height:150px;
+	}
+	text-align:center;
+	padding: 15px;
+	border: 2px solid #f8f5f0;
+}
+
+.btn-sm {
+	margin-top: 8px;
+}
