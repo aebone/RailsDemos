@@ -1,17 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="page-header">Admin</h1>
-<h1>Welcome</h1> 
-
-<p>It's <%= @time %><br>
-We have <%= pluralize(@total_orders, "order") %>.</p>
-
-<%= link_to 'New Product', new_product_path, class: "btn btn-default" %>
-<br><br>
-
-	<%= link_to 'Orders', orders_path, class: "btn btn-primary" %>
-	<%= link_to 'Products', products_path, class: "btn btn-primary" %>
-	<%= link_to 'Users', users_path, class: "btn btn-primary" %><br><br>
+<h1 class="page-header">Products</h1>
 
 <% @products.each do |product| %>
 	<div class="row product">

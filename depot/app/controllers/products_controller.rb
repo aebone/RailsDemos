@@ -15,7 +15,6 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
-    @time = DateTime.now.strftime("%D - %H:%M")
   end
 
   # GET /products/1

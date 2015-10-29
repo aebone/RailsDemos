@@ -26,8 +26,10 @@
 	        </li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	   		  <li><a href="/products">Admin</a></li>
-	   		  <li><%= link_to 'Logout', logout_path, method: :delete %></li>
+	   		  <li><a href="/admin">Admin</a></li>
+	   		  <% if session[:user_id] %> 
+	   		  	<li><%= link_to 'Logout', logout_path, method: :delete %></li>
+	   		  <% end %>
 	      </ul>
 	    </div>
 	  </div>
