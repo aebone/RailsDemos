@@ -1,0 +1,9 @@
+<h2>Your Cart</h2> 
+
+<%= render(cart.line_items) %>
+
+<strong>Total:</strong>
+<%= number_to_currency(cart.total_price) %>
+
+<%= button_to 'Empty cart', cart, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %>
+<%= button_to "Checkout", new_order_path, method: :get, class: "btn btn-sm btn-success" %>

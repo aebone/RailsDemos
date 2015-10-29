@@ -2,18 +2,32 @@
 
 <h1 class="page-header">Our Catalog</h1>
 
-<% @products.each_slice(3) do |row| %>
-	<div class="row">
-	  <% row.each do |product| %>
-		  <div class="col-md-4">
-			  <div class="product-customer">
-			    <%= link_to image_tag(product.image_url), product %><br>
-			    <h3><%= link_to product.title, product %></h3>
-			    <%= truncate(strip_tags(product.description), length: 80) %><br>
-			    <h2>U$ <%= sprintf('%.2f', product.price) %></h2>
-			    <%= button_to 'Add to Cart', line_items_path(product_id: product), class: "btn btn-sm btn-primary" %>
-			  </div>
-		  </div>
+<div class="row">
+	<div class="col-md-10">
+		<% @products.each_slice(3) do |row| %>
+			<div class="row">
+			  <% row.each do |product| %>
+				  <div class="col-md-4">
+					  <div class="product-customer">
+					    <%= link_to image_tag(product.image_url), product %><br>
+					    <h3><%= link_to product.title, product %></h3>
+					    <%= truncate(strip_tags(product.description), length: 80) %><br>
+					    <h2>U$ <%= sprintf('%.2f', product.price) %></h2>
+					    <%= button_to 'Add to Cart', line_items_path(product_id: product), class: "btn btn-sm btn-primary" %>
+					  </div>
+				  </div>
+				<% end %>
+			</div>
 		<% end %>
 	</div>
-<% end %>
+	<div class="col-md-2">	
+		<%= render @cart %>
+		<% if session[:user_id] %> 
+		<h2>Admin</h2>
+		<p><%= link_to 'Orders', orders_path %></p> 
+		<p><%= link_to 'Products', products_path %></p> 
+		<p><%= link_to 'Users', users_path %></p>
+		<%= button_to 'Logout', logout_path, method: :delete, class: "btn btn-sm btn-default" %> 
+		<% end %>
+	</div>
+</div>
